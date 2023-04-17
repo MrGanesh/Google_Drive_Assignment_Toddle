@@ -19,20 +19,6 @@ export default function FileFolderComp() {
   const checkName = (e) => {
     let isNameExist = false;
     setInputFieldVal(e.target.value);
-    //globally avoid duplicate code
-
-    // const iterate = (array) => {
-    //   for (let item in array) {
-    //     if (array[item].name === e.target.value) {
-    //       isNameExist = true;
-    //       return;
-    //     }
-    //     if (array[item].fileList.length > 0) {
-    //       iterate(array[item].fileList);
-    //     }
-    //   }
-    // }
-    // iterate(driveDataDB.fileList);
     driveData.fileList.forEach((item) => {
       if (item.name === e.target.value) {
         item.isVisible = true;
